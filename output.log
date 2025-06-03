@@ -1,0 +1,124 @@
+simlan_cpp_gemini/build$ ./simlanc ../demo.simlan
+Compiling Simlan file: ../demo.simlan
+
+--- Tokens ---
+Token: PRINT ('PRINT') Value: 0 Line: 3 Col: 1
+Token: NUMBER ('10') Value: 10 Line: 3 Col: 7
+Token: PLUS ('+') Value: 0 Line: 3 Col: 10
+Token: NUMBER ('2') Value: 2 Line: 3 Col: 12
+Token: STAR ('*') Value: 0 Line: 3 Col: 14
+Token: NUMBER ('3') Value: 3 Line: 3 Col: 16
+Token: SEMICOLON (';') Value: 0 Line: 3 Col: 17
+Token: PRINT ('PRINT') Value: 0 Line: 4 Col: 1
+Token: LPAREN ('(') Value: 0 Line: 4 Col: 7
+Token: NUMBER ('10') Value: 10 Line: 4 Col: 8
+Token: PLUS ('+') Value: 0 Line: 4 Col: 11
+Token: NUMBER ('2') Value: 2 Line: 4 Col: 13
+Token: RPAREN (')') Value: 0 Line: 4 Col: 14
+Token: STAR ('*') Value: 0 Line: 4 Col: 16
+Token: NUMBER ('3') Value: 3 Line: 4 Col: 18
+Token: SEMICOLON (';') Value: 0 Line: 4 Col: 19
+Token: PRINT ('PRINT') Value: 0 Line: 6 Col: 1
+Token: NUMBER ('100') Value: 100 Line: 6 Col: 7
+Token: SLASH ('/') Value: 0 Line: 6 Col: 11
+Token: NUMBER ('4') Value: 4 Line: 6 Col: 13
+Token: MINUS ('-') Value: 0 Line: 6 Col: 15
+Token: NUMBER ('5') Value: 5 Line: 6 Col: 17
+Token: SEMICOLON (';') Value: 0 Line: 6 Col: 18
+Token: PRINT ('PRINT') Value: 0 Line: 7 Col: 1
+Token: NUMBER ('2') Value: 2 Line: 7 Col: 7
+Token: STAR ('*') Value: 0 Line: 7 Col: 9
+Token: LPAREN ('(') Value: 0 Line: 7 Col: 11
+Token: NUMBER ('3') Value: 3 Line: 7 Col: 12
+Token: PLUS ('+') Value: 0 Line: 7 Col: 14
+Token: NUMBER ('4') Value: 4 Line: 7 Col: 16
+Token: SLASH ('/') Value: 0 Line: 7 Col: 18
+Token: NUMBER ('2') Value: 2 Line: 7 Col: 20
+Token: RPAREN (')') Value: 0 Line: 7 Col: 21
+Token: MINUS ('-') Value: 0 Line: 7 Col: 23
+Token: NUMBER ('1') Value: 1 Line: 7 Col: 25
+Token: SEMICOLON (';') Value: 0 Line: 7 Col: 26
+Token: PRINT ('PRINT') Value: 0 Line: 10 Col: 1
+Token: NUMBER ('7.5') Value: 7.5 Line: 10 Col: 7
+Token: STAR ('*') Value: 0 Line: 10 Col: 11
+Token: NUMBER ('2') Value: 2 Line: 10 Col: 13
+Token: PLUS ('+') Value: 0 Line: 10 Col: 15
+Token: NUMBER ('1.0') Value: 1 Line: 10 Col: 17
+Token: SEMICOLON (';') Value: 0 Line: 10 Col: 20
+Token: PRINT ('PRINT') Value: 0 Line: 13 Col: 1
+Token: NUMBER ('42') Value: 42 Line: 13 Col: 7
+Token: SEMICOLON (';') Value: 0 Line: 13 Col: 9
+Token: EOF ('')
+
+--- Abstract Syntax Tree (AST) ---
+ProgramNode:
+  PrintNode:
+    BinaryOpNode: '+'
+      Left:
+        NumberNode: 10
+      Right:
+        BinaryOpNode: '*'
+          Left:
+            NumberNode: 2
+          Right:
+            NumberNode: 3
+  PrintNode:
+    BinaryOpNode: '*'
+      Left:
+        BinaryOpNode: '+'
+          Left:
+            NumberNode: 10
+          Right:
+            NumberNode: 2
+      Right:
+        NumberNode: 3
+  PrintNode:
+    BinaryOpNode: '-'
+      Left:
+        BinaryOpNode: '/'
+          Left:
+            NumberNode: 100
+          Right:
+            NumberNode: 4
+      Right:
+        NumberNode: 5
+  PrintNode:
+    BinaryOpNode: '-'
+      Left:
+        BinaryOpNode: '*'
+          Left:
+            NumberNode: 2
+          Right:
+            BinaryOpNode: '+'
+              Left:
+                NumberNode: 3
+              Right:
+                BinaryOpNode: '/'
+                  Left:
+                    NumberNode: 4
+                  Right:
+                    NumberNode: 2
+      Right:
+        NumberNode: 1
+  PrintNode:
+    BinaryOpNode: '+'
+      Left:
+        BinaryOpNode: '*'
+          Left:
+            NumberNode: 7.5
+          Right:
+            NumberNode: 2
+      Right:
+        NumberNode: 1
+  PrintNode:
+    NumberNode: 42
+
+--- Simlan Output ---
+16
+36
+20
+9
+16
+42
+
+Simlan processing finished.

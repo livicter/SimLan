@@ -1,0 +1,13 @@
+// demo.simlan - A simple program for Simlan v0.1
+
+PRINT 10 + 2 * 3;  // Expected AST: PRINT (10 + (2 * 3))
+PRINT (10 + 2) * 3; // Expected AST: PRINT ((10 + 2) * 3)
+
+PRINT 100 / 4 - 5; // Expected AST: PRINT ((100 / 4) - 5)
+PRINT 2 * (3 + 4 / 2) - 1; // Expected AST: PRINT ((2 * (3 + (4/2))) - 1)
+
+// Example with a decimal
+PRINT 7.5 * 2 + 1.0;
+
+// Example with only a number
+PRINT 42;
