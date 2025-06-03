@@ -1,3 +1,5 @@
+This is a toy language!
+
 Overall Compiler Flow
 
 When you run simlanc demo.simlan, this is what happens at a high level:
