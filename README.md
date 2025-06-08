@@ -14,3 +14,13 @@ Then, it calls the execute() method on the AST's root node to interpret the prog
 
 This can be visualized as:
 [demo.simlan (text)] --> Lexer --> [Tokens] --> Parser --> [AST] --> Interpreter (execute methods) --> [Program Output]
+
+Compilation and Run
+user:/build$ make
+[ 20%] Building CXX object CMakeFiles/simlanc.dir/src/main.cpp.o
+[ 40%] Building CXX object CMakeFiles/simlanc.dir/src/lexer.cpp.o
+[ 60%] Building CXX object CMakeFiles/simlanc.dir/src/parser.cpp.o
+[ 80%] Building CXX object CMakeFiles/simlanc.dir/src/ast.cpp.o
+[100%] Linking CXX executable simlanc
+[100%] Built target simlanc
+user:/build$ ./simlanc ../demo.simlan
